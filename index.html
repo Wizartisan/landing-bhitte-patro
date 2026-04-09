@@ -659,6 +659,58 @@ nav {
   padding: 10px 24px; border-radius: 9px; display: inline-block;
 }
 
+/* TUTORIAL */
+.tutorial-section {
+  margin-bottom: 96px;
+}
+.tutorial-section:last-child {
+  margin-bottom: 0;
+}
+.tutorial-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--accent);
+  padding: 4px 12px;
+  border-radius: 980px;
+  margin-bottom: 12px;
+}
+.tutorial-section h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+.tutorial-section .tutorial-desc {
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--text2);
+  max-width: 560px;
+  line-height: 1.65;
+  margin-bottom: 32px;
+}
+.video-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--surface);
+}
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+}
+
 /* TROUBLESHOOT */
 .os-tabs {
   display: flex; gap: 2px; padding: 3px;
@@ -765,6 +817,7 @@ footer {
     <li><a href="#" onclick="go('home');return false;" id="n-home" class="active">Home</a></li>
     <li><a href="#" onclick="go('features');return false;" id="n-features">Features</a></li>
     <li><a href="#" onclick="go('download');return false;" id="n-download">Download</a></li>
+    <li><a href="#" onclick="go('tutorial');return false;" id="n-tutorial">Tutorial</a></li>
     <li><a href="#" onclick="go('troubleshoot');return false;" id="n-troubleshoot">Troubleshoot</a></li>
     <li><a href="https://github.com/Wizarisan/bhitte-patro" id="n-contribute">Contribute</a></li>
   </ul>
@@ -787,6 +840,7 @@ footer {
   <a href="#" onclick="go('home');toggleMenu();return false;">Home</a>
   <a href="#" onclick="go('features');toggleMenu();return false;">Features</a>
   <a href="#" onclick="go('download');toggleMenu();return false;">Download</a>
+  <a href="#" onclick="go('tutorial');toggleMenu();return false;">Tutorial</a>
   <a href="#" onclick="go('troubleshoot');toggleMenu();return false;">Troubleshoot</a>
   <a href="https://github.com/Wizarisan/bhitte-patro" id="m-contribute">Contribute</a>
   <div class="theme-row">
@@ -1034,6 +1088,12 @@ footer {
       <p class="sec-label">Download</p>
       <h2 class="sec-title">Three editions.<br>All free.</h2>
       <p class="sec-sub">Start with Basic. Upgrade anytime. No account or sign-in needed.</p>
+      <div style="margin-bottom: 32px;">
+        <a href="#" onclick="go('tutorial');return false;" style="font-size: 14px; font-weight: 500; color: var(--blue); text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+          <svg style="width: 16px; height: 16px; fill: currentColor;" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Watch tutorial videos
+        </a>
+      </div>
       <div class="warn-box"><strong>Heads up:</strong>  AI editions will arrive in approximately one week. Basic and Online are available now. If macOS blocks the app, see the <a href="#" onclick="go('troubleshoot');return false;" style="color:var(--blue);text-decoration:none;">Troubleshoot</a> page for a quick fix.</div>
 
       <div class="dl-editions">
@@ -1095,6 +1155,91 @@ footer {
             </ul>
             <span class="btn-dis">Coming Soon</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- TUTORIAL -->
+<div id="page-tutorial" class="page">
+  <section class="section">
+    <div class="wrap">
+      <p class="sec-label">Tutorial</p>
+      <h2 class="sec-title">Get started with<br>BhittePatro.</h2>
+      <p class="sec-sub">Quick video guides to help you install and set up your Nepali calendar.</p>
+
+      <!-- MenuApp Section -->
+      <div class="tutorial-section">
+        <span class="tutorial-badge">Menu App</span>
+        <h2>Download & Install BhittePatro</h2>
+        <p class="tutorial-desc">Learn how to download the app, bypass macOS security warnings, and get your menu bar calendar running in under two minutes.</p>
+
+        <div class="video-container">
+          <video controls preload="metadata" poster="">
+            <source src="./assets/menuapp.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div style="margin-top: 24px; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);">
+          <h3 style="font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 12px;">Quick Steps</h3>
+          <ol style="list-style: none; padding: 0; margin: 0;">
+            <li style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--divider);">
+              <span style="font-size: 11px; font-weight: 700; color: var(--text3); min-width: 20px; padding-top: 2px;">01</span>
+              <span style="font-size: 14px; color: var(--text2); line-height: 1.5;">Download the latest version from the <a href="#" onclick="go('download');return false;" style="color: var(--blue); text-decoration: none;">Download page</a></span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--divider);">
+              <span style="font-size: 11px; font-weight: 700; color: var(--text3); min-width: 20px; padding-top: 2px;">02</span>
+              <span style="font-size: 14px; color: var(--text2); line-height: 1.5;">Open the .dmg file and drag BhittePatro to your Applications folder</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--divider);">
+              <span style="font-size: 11px; font-weight: 700; color: var(--text3); min-width: 20px; padding-top: 2px;">03</span>
+              <span style="font-size: 14px; color: var(--text2); line-height: 1.5;">If macOS blocks the app, follow the steps on the <a href="#" onclick="go('troubleshoot');return false;" style="color: var(--blue); text-decoration: none;">Troubleshoot page</a></span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 0;">
+              <span style="font-size: 11px; font-weight: 700; color: var(--text3); min-width: 20px; padding-top: 2px;">04</span>
+              <span style="font-size: 14px; color: var(--text2); line-height: 1.5;">Click the BhittePatro icon in your menu bar — your Nepali calendar is ready!</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="hr" style="margin: 80px auto;"></div>
+
+      <!-- Widget Section -->
+      <div class="tutorial-section">
+        <span class="tutorial-badge">Desktop Widget</span>
+        <h2>Add the Calendar Widget to Your Desktop</h2>
+        <p class="tutorial-desc">Keep your Nepali calendar visible on your desktop at all times. Here's how to add the widget to your macOS desktop.</p>
+
+        <div class="video-container">
+          <video controls preload="metadata" poster="">
+            <source src="./assets/widget.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div style="margin-top: 24px; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);">
+          <h3 style="font-size: 17px; font-weight: 600; color: var(--text); margin-bottom: 12px;">Quick Steps</h3>
+          <ol style="list-style: none; padding: 0; margin: 0;">
+            <li style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--divider);">
+              <span style="font-size: 11px; font-weight: 700; color: var(--text3); min-width: 20px; padding-top: 2px;">01</span>
+              <span style="font-size: 14px; color: var(--text2); line-height: 1.5;">Make sure BhittePatro is installed and running</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--divider);">
+              <span style="font-size: 11px; font-weight: 700; color: var(--text3); min-width: 20px; padding-top: 2px;">02</span>
+              <span style="font-size: 14px; color: var(--text2); line-height: 1.5;">Right-click on your desktop and select "Edit Widgets"</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--divider);">
+              <span style="font-size: 11px; font-weight: 700; color: var(--text3); min-width: 20px; padding-top: 2px;">03</span>
+              <span style="font-size: 14px; color: var(--text2); line-height: 1.5;">Search for "BhittePatro" in the widget gallery</span>
+            </li>
+            <li style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 0;">
+              <span style="font-size: 11px; font-weight: 700; color: var(--text3); min-width: 20px; padding-top: 2px;">04</span>
+              <span style="font-size: 14px; color: var(--text2); line-height: 1.5;">Click the widget and drag it to your desired desktop location</span>
+            </li>
+          </ol>
         </div>
       </div>
     </div>
